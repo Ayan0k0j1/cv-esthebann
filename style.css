@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Josefin+Sans:100|Rambla&display=swap'); /*On  importe les fonts audiowide ,Josefin sans et rambla */
+
+html {
+  scroll-behavior: smooth; /* pour que ce ne soit pas brusque quand on utilse la navbar */
+}
+body {
+  color: #283655 !important; /* couleur de la syntaxe en html*/
+  background-color: #f7faff !important;
+  font-family: 'Rambla', sans-serif; /* on appele la font Rambla et si ca ne marche pas il passe en sans-serif*/
+}
+h2, h3 {  /*  Le sous titre et titre des parties*/
+  font-family: 'Audiowide', sans-serif; /* on appele la font Audiowide et si ca ne marche pas il passe en sans-serif*/
+  letter-spacing: 0.2em; /* Espace les lettres entre elles de 2em*/
+  text-transform: uppercase; /*Les caractéres sont en capitales */
+  text-shadow: -1px -1px 1px #283655; /* ombre de -1 px de couleur #283655*/
+}
+li {
+  list-style-type: none; /*Aucun marqueur n'est affiché.*/
+}
+/* ************************ HEADER *********************** */
+.navbar {
+  background-color: #FAFAFA; /* couleur de fond de la navbar*/
+  opacity: 0.9; /* opacité de la navbar*/
+  height: 42px; /* hauteur de 42 pixels*/ 
+  transition: 0.7s; /* vitesse de transition de la navbar, elle apparait avec une vitesse 0.7 s pour qu'elle apparait tranquillement */
+}
+.navbar-nav {
+  width: 80% !important; /* définit la largeur de l'élément à 80 */
+  margin: 0 auto; /* permet de centrer */
+  justify-content: space-between; /* les éléments sont espacés équitablement*/
+}
+header {
+  text-align: center; /* on centre le texte */
+  height: 100vh; /* prendre tout le contenant de la page dans la hauteur */
+  background: url(media/header.jpg) no-repeat fixed 50% 50%; /* on cherche l' image de fond header dans le dossier media il ne se répete pas et il est fixé a 50 50 donc au centre */
+  background-size: cover; /* l'image de fond couvre tout l'espace*/
+}
+h1 {
+  padding: 90px 0 10px 0; /* on décolle h1 de 90 px de haut et 10 px en bas*/
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 4.3em; /* on définit la taille de  fonte utilisé pour le texte dans h1 */
+  text-transform: uppercase; /*Les caractéres sont en capitales */
+}
+#line {
+  height: 1px; /* hauteur de 1 px*/
+  background-color: #b3aca7; /* couleur de fond #b3aca7*/
+  width: 25%; /*25pourcent de largeur */
+  margin: 0 auto; /*centre automatiquement*/
+}
+h2 {
+  padding: 20px 0 50px 0; /* on décolle h2 de 20 px de haut et 50 px en bas*/
+  font-size: 3em; /* on définit la taille de fonte utilisé pour le texte dans h2 */
+  text-transform: uppercase;/*Les caractéres sont en capitales */
+}
+.presentation {
+  height: 240px; /* hauteur de 240 px*/
+  margin-top: 20px; /*se détache du haut de 20 px */
+}
+.infos {
+  border: 1px solid #b3aca7;           /* bordure de 1px*/
+  display: flex;                        /* aligne les éléments */
+  flex-direction: column;              /* les alignes en colonnes*/
+  justify-content: space-between;     /* les répartis dans le sens de la hauteur de facon égale */
+  padding: 20px 0;                   /* on décolle infos de 20 px en haut */
+}
+.photo {
+  border: 1px solid #b3aca7;   /* entoure d' une bordure de 1px*/
+  position: relative;           /* permet de positionner l'image */
+}
+.photo img {
+  position: absolute;        /* pour la positionne  on veut par rapport au bord*/
+  top: 0; 
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; 
+  height: auto;                  /* on met top, bottom ,left et right à 0 puis on met la largeur et la hauteur en autou pour que l'image se centre automatiquement*/
+  max-width: 80%;               /*  Avec max-width on empeche l'image d etre supérieur à la valeur demandé*/
+  border-radius: 3px;          /* on définit les coins de la bordure à 3 px */
+  box-shadow: 0 0 4px #111; /* on met une ombre de 4px au bord pour donner l'impression que l'imag est décollé*/
+}
+header .button {
+  margin-top: 45px;                      /* on le détache de 45 px vers le haut */
+}
+header .button a {
+  padding: 20px 80px;                 /* on écarte le bord de 20 px sur le haut et 80 px sur les cotés */
+  border: 1px solid #b3aca7;       /* entoure d' une bordure de 1px*/
+  width: 300px;                     /* largeur du bouton de 300 px */
+}
+header .button:hover a {
+  background: #b3aca7;         /* couleur de fond de button;hover*/  
+  color: #e2dedb; 
+  transition: all 0.3s ease-in-out;    /* vitesse de transition de 0.3*/
+  text-decoration: none;              /* on met none à texte-decoration pour pas que le texte soit souligné quand on passe sur le boutton */
+}
+
+
+/* ********************** LANGAGES *********************** */
+#langages {
+  padding: 80px 80px 80px 50px;    /* on décolle langages de 80 px partout sauf en bas avec50 px*/
+  margin: 30px 0 0 6% ; /*  On decale langages de 20 px du header et une margin left qui évolue selon la taille de l'écran*/
+  height: 620px; /* hauteur de 620 px*/
+  width: 47%;  /*largeur de 47*/
+  max-width: 640px; /* largeur max de 640 px*/
+  background: rgb(247,121,125);
+  background: linear-gradient(180deg, rgba(247,121,125,1) 15%, rgba(251,215,134,1) 45%, rgba(198,255,255,1) 91%);
+  clip-path: polygon(6% 4%, 100% 0, 87% 100%, 0 94%);
+}
+#langages .bar {
+  padding: 10px 0 4px 0; /*on espace chaque barre de 10 px  de haut et 4 px en bas*/
+  letter-spacing: 0.1em; /* l'espace entre les lettres est de 0.1 em*/
+}
+
+/* ********************** FORMATION ********************* */
+#formation {
+  position: relative; /*on lui donne la position qu'on veut */
+  top: -200px; /* -200 par rappport au sommet de la division*/
+  float: right; /* il se déplace vers la droite*/
+  margin-right: 5%; /*tout le temps écarté de 5 du bord*/
+  padding: 60px 0 60px 50px; /* en haut de 110 , en bas de 60 et à gauche de 50 p*/
+  width: 45%; /* largeur de 45 */
+  max-width: 660px; /* s'arrete de grandir jusqu'a 660 px */
+  background: linear-gradient(19deg, rgba(0,180,219,0.69) 0%, #0083b0 80%);
+  clip-path: polygon(6% 4%, 100% 0%, 100% 100%, 0 95%);
+}
+#autodidacte {
+  padding-top: 20px; /*décale de 20 px âr rapport au haut */
+}
+#fcc {
+  padding: 50px 0 0 9%; /* tout le temps décalé à 9 sur la gauche */
+}
+#occ {
+  padding: 50px 0 0 18% /* décale 50 px du haut et à 18 par rapport à la gauche*/
+}
+#formation h4 { /*les sous titresde la partie formation */
+  font-weight: bold; /* caractère en gras */
+  letter-spacing: 0.08em; /* Espace les lettres entre elles de 0.08em*/
+  padding-bottom: 10px; /* descend de 10 px par rapport au titre */
+  color: #005978; /* couleur du texte */
+  text-shadow: -1px -1px 1px #35B4D5; /* texte aura une ombre de -1 px */
+}
+.counter {
+  display: flex; /*aligne*/
+  text-align: center; /* centre*/
+}
+.data {
+  border: 1px solid #35B4D5; /* bordure de 1 px pour chaque carrée*/
+  width: 170px; /*  largeur de 170 px*/
+  margin: 0 4%; /*  écarté de 4 à gauche*/
+  box-shadow: 0 0 8px #1C9DC4; /* ombre de 8px  autour du nombre */
+  padding: 5px 20px; /* décolle de 5 px et 20 px sur les cotés*/
+}
+.counter-value {
+  font-size: 2em;        /* taille de 2em*/
+}
+.data-span {
+  font-size: 1.8em;     /* taille de 1.8em */
+}
+/* ********************** PARCOURS *************************** */
+#parcours {
+  max-width: 800px; /* largeur max de 640 px*/
+  margin: 640px auto 180px auto;  /* 640 px  de haut et 180 px de largeur pour centrerl'élément*/
+  padding: 40px 30px 100px 30px; /* on se décale de 40 px en haut,30 px , 100px et 30 px*/ 
+  background: url(./media/parcours.jpg) no-repeat fixed 50% 50%; /* on cherche l' image de fond parcours.jpg dans le dossier media il ne se répete pas et il est fixé a 50 50 donc au centre */
+  background-size: cover; /* l'image ne se répete pas et prend tout l'espace */
+  border-radius: 8px; /*bordure de 8px*/
+  box-shadow: -1px -1px 8px #283655; /*ombre de la figure avec une couleur #283655*/
+}
+#parcours h3 {
+  font-size: 2.5em; /* taille de 2.5em*/
+  padding-bottom: 30px; /* descend de 30 px par rapport à parcourt*/
+}
+#parcours h4 {
+  font-size: 1.6em; /* taille de 1.6em*/
+  color: #ff4e50; /* couleur des caractères*/
+  margin-left: 20px; /* se décale de 20 px par rapport au coté gauche*/
+}
+#parcours h6 {
+  font-style: italic; /*caractères en italique */
+  color: #edca21; /* couleur des sous titres */
+  margin-left: 20px; /* se décale de 20 px par rapport au coté gauche*/
+}
+#parcours p {
+  line-height: 1.9em; /*espace entre les lignes de 1.9 em*/
+}
+.timeline {
+  border-top: 3px solid; /*bordure du haut de 3 px*/
+  border-image: linear-gradient(to right, #f9d423, #ff4e50); /*border-image pour donner une couleur à la bordure*/
+  border-image-slice: 1; /* border-image-slice sert à découper l'image*/
+  margin: 0; /* marge de 0 pour que chaque élément se touche */
+  padding: 40px; /*  en haut à gauche à droite et en bas tout est espacé de 40 px*/
+  position: relative;
+}
+.timeline:nth-child(1):after { /* on appelle le 1 er timeline*/
+  content: '▲'; /* ▲ = alt 30 permet de faire le bout de la fleche*/
+  color: #ff4e50;/* couleur fleche rouge */
+  position: absolute; 
+  top: -10px;/* -10 px en haut */
+  right: -10px; /* -10 px à droite */
+  box-sizing: content-box !important; 
+}
+.timeline:nth-child(1) {
+  border-bottom: 3px solid; /*définit la bordure du bas à 3px*/
+  border-top: none; /* enlève la bordure du haut */
+  width: 80%; /*largeur de 80 pourcent */
+}
+.timeline:nth-child(2) { /* on appelle le 2eme timeline*/
+  border-top: none; /* enlève la bordure du haut */
+}
+.timeline:nth-child(odd) { /* on appelle les timeline impair 1 et 3  */ 
+  border-right: 3px solid; /* on leur donne une bordure à droite de 3 px*/
+  padding-left: 0; /* bordure gauche à  px*/
+}
+.timeline:nth-child(even) { /* on appelle les timeline pair 2 et 4*/
+  border-left: 3px solid; /* bordure gauche de 3px*/
+  padding-right: 0;/* bordure droite à  px*/
+}
+
+/* ************************* PORTFOLIO ************************* */
+
+
+/* ********************* OTHER *********************** */
+#other-skills { 
+  margin-top: 80px;/* marge en haut de 80 px*/
+  padding: 50px 100px 100px 100px; 
+  width: 100%; /*largeur de 100%*/
+  background-color: #375E97;
+  clip-path: polygon(0 11%, 100% 0%, 100% 100%, 0 84%);
+}
+#other-skills h3 {
+  transform: rotate(-3.2deg); /*angle du texte de -3.2 degrés*/
+  font-size: 3em;
+  padding-top: 30px; /*décale le titre de 30 px du haut */
+  text-shadow: -1px 1px 0px maroon; /*ombre du titre de couleur */
+  color: #FFBB00;
+}
+.cloud {
+  text-align: center; /* on centre le texte */
+  padding: 50px 0;/*détache en haut et en bas de 50 les mots */
+  font-size: 2em; /*taille écriture de 2em*/
+  text-transform: uppercase; /*Les caractéres sont en capitales */
+}
+/* ******************** HOBBIES ******************** */
+#hobbies {
+  padding: 250px 50px 100px 50px; 
+  margin: -300px 0px -90px 0px;
+  clip-path: polygon(0 21%, 100% 31%, 100% 95%, 0% 100%);
+  background: #FFBB00; /*On fait la taille, la largeur ,la forme et la couleur de la partie hobbies*/
+}
+#hobbies h3 {
+  transform: rotate(4.2deg);                            /*inclinaison de 4.2 degrés*/
+  font-size: 3em;                                     /*on définit la taille du titre hobbies*/
+  text-shadow: -1px 1px 0px #375E97;               /*le titre à une ombre légere de couleur #375E97*/
+}
+.pictures {
+  display: flex;                                     /* les images s'alignent */
+  justify-content: center;                            /* toujour collé au centre */
+}
+.flip-box-back div {
+  margin: 0 auto;                                    /*on centre le texte qui sera au dos des images*/
+  writing-mode: vertical-lr;                        /* le texte sera écrit à la verticale */
+  text-orientation: upright;                        /* les lettres sont verticales*/
+}
+.flip-box-back p {
+  text-transform: uppercase;                        /*Les caractéres sont en capitales */
+  padding: 10px;
+  font-size-adjust: auto;                             /*les images s'ajuste à la taille du texte  */
+}
+.flip-box-back {    
+  color: white;                                    /*couleur du au dos des images en blanc */
+  transform: rotateY(180deg);                         /* se tourne sur l'axe verticale de 180*/
+}
+.flip-box-front, .flip-box-back {
+  position: absolute; 
+  width: 100%;
+  height: 100%;                                        /* le texte et l'image  prennent tout l'espace */
+  backface-visibility: hidden;                        /* les faces arrières des éléments sont invisibles . */
+}
+.flip-box {
+  overflow: hidden;                                   /* si l'écran est petit ça ne dépasse pas*/
+  background-color: transparent;
+  width: 100%;
+  max-width: 300px;  /*s'arrète à 300px*/
+  height: 300px; /*hauteur de 300*/
+  perspective: 1000px;
+}
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  max-width: 300px;                     /*peut aller jusqu'à 300 px*/
+  height: 300px;
+  transition: transform 0.8s;            /*vitesse de transition*/
+  transform-style: preserve-3d;        /*effet de 3d sur la rotation des cartes*/
+}
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);            /*si on passe sur l'image la carte se retourne de 180 degrés sur l'axe y */
+}
+
+/* ********************** FOOTER ************************ */
+footer {
+  background: url(./media/footer.jpg) 50% 0% no-repeat fixed; /*fond de 50% sur l'horizontale et 0 à la verticale pour voir juste le bas*/
+  background-size: cover; /*l'image prend tout l'espace*/
+  text-align: center; /*le texte est centré */
+  padding: 160px 50px 5 50px;
+}
+footer h3 {
+  padding: 150px 0 60px 0;
+  font-size: 2.5em;
+}
+.footer-icons {
+  margin: 0 auto; 
+  display: flex; /*aligne les 3 icons*/
+  justify-content: space-between; /*se répartis automatiquement équitablement*/
+  max-width: 60%; /*largeur maximum de l'écart des icones est de 60%*/
+}
+.network {
+  font-size: 4em;
+  border: 1px solid #b3aca7; /*Bordure de px*/
+  padding: 30px 45px;
+  color: #726659;
+  z-index: -1 !important; 
+  border-radius: 50%; /*La bordure de l'icone devient un  cercle*/
+}
+.network:hover, textarea:hover, input:hover, .form-button:hover {
+  background: #b3aca7;
+  color: #e2dedb;
+  transition: all 0.3s ease-in-out; /*Quand on passe sur les icones la couleur de l'icone et du fond du bouton changent*/
+}
+.form-container {
+  padding-top: 20px; /*partie mail */
+}
+#reused_form {
+  position: relative;
+  margin: 50px auto;
+}
+input {
+  font-size: 0.85em;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px;
+  background: transparent;
+  outline: none;
+  color: #726659;
+  border: solid 1px #b3aca7;
+  border-bottom:none;
+}
+textarea {
+  width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  background: transparent;
+  outline: none;
+  color: #726659;
+  border: solid 1px #b3aca7;
+  resize: none !important;
+}
+input::placeholder, textarea::placeholder, input:focus::placeholder, textarea:focus::placeholder {
+  color: #aca49c;
+}
+input:hover::placeholder, textarea:hover::placeholder, input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+  color: #e2dedb;
+}
+.form-button {
+  background: transparent;
+  border: solid 1px #b3aca7;
+  padding: 20px 75px;
+  margin: 14px 0 -20px 0;
+}
+.form-container h4 {
+  font-size: 2em;
+}
+#error_message {
+  color: red;
+  border: 1px solid red;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 15px 15px 8px 15px;
+  box-shadow: 0 0 5px red;
+}
+#success_message {
+  color: green;
+  border: 1px solid green;
+  max-width: 400px;
+  margin: 150px auto;
+  padding: 50px;
+  box-shadow: 0 0 5px green;
+}
+.arrow {
+  margin: -20 auto;
+  padding-top: 15px;
+  animation: arrow linear 1.5s; /*on appelle arrow son animation dure 1.5s*/
+  animation-iteration-count: infinite; /*la fleche refait son animation à l'infini*/
+}
+@keyframes arrow {
+  0% {
+    transform: translateY(0px); /* à 0% elle rste comme elle est */
+  }
+  38% {
+    transform: translateY(8px); /* gagne 8 px sur l'axe des y*/
+  }
+  100% {
+    transform: translateY(0px); /*entre 38% 100% repasse à 0 px*/
+  }
+}
+.arrow a {
+  font-size: 3em; /* taille de la fleche de 3 em*/
+  border: none; /*la fleche n'a pas de bordure*/
+  color: #726659;
+}
+.arrow:hover i {
+  transform: scale(1.6); /*quand on passe sur la fleche elle grossit de 1.6 = 60% */
+  transition: 0.5s ease-in-out; /*Vitesse de  grossisssement DE 0.5s*/
+  color: #726659;
+}
+footer p {
+  font-size: 0.9em;
+  letter-spacing: 0.3em; /*taille de 0.9em et espace de 0.3em des lettres pour la partie  from esthebann*/
+}
+/* ********************** MEDIA QUERIES *********************** */
+@media screen and (max-width: 770px) { /*modifications si la taille de l'écra fait 770px*/ 
+  .infos h5, .typed {
+    font-size: 0.9em;
+  }
+  #langages {
+    margin-left: 1%;
+  }
+  #formation {
+    margin-right: 1%;
+  }
+  .network {
+    font-size: 2em;
+    padding: 10x 20px; 
+  }
+}
+@media screen and (max-width: 770px) {
+  .navbar {
+    display: none !important;
+  }
+  .fixed-top {
+    position: unset !important;
+  }
+  h1, h2 {
+    font-size: 2em; /*réduit h1 et h2 à 2em */
+  }
+  #langages {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #formation {
+    margin: 210px 0 0 10%;
+    width: 80%;
+    float: none;
+    display: block;
+  }
+  .counter-value {
+    font-size: 1em; /*taille des chiffres diminuent*/
+  }
+  .data-span {
+    font-size: .8em;
+  }
+  #parcours {
+    margin-top: -50px /*parcours remonte de -50px */
+  }
+  .legende p {
+    display: none;
+  }
+  #other-skills h3, #hobbies h3, footer h3 {
+    font-size: 2em;
+  }
+  .cloud {
+    font-size: 1em;
+  }
+  .flip-box-back p {
+    padding: 10px 0px;
+  }
+  .network {
+    font-size: 1.4em;
+    padding: 14px 20px;
+  }
+  input, textarea {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 520px) { /*modification si la taille de l'écran est de 520px*/
+  h1 {
+    padding-top: 20px;
+  }
+  h3 {
+    font-size: 1em !important;
+  }
+  #fcc, #occ {
+    padding: 50px 0 0 0;
+  }
+  .projet:nth-child(2), .projet:nth-child(3) {
+    margin-left: 0;
+  }
+  .legende {
+    opacity: 1;
+  }
+  #other-skills {
+    display: none;
+  }
+  #hobbies {
+    margin-top: -30px;
+  }
+  .flip-box-back p {
+    font-size: 0.7em;
+  }
+}
